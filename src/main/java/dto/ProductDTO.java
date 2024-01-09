@@ -1,15 +1,26 @@
 package dto;
 
-public class ShoppingDTO {
+public class ProductDTO {
     private int productId;
     private String productName;
     private int productQty;
     private double productPrice;
 
-    public ShoppingDTO() {
+    public ProductDTO() {
     }
 
-    public ShoppingDTO(String productName, int productQty, double productPrice) {
+    public ProductDTO(int productId) {
+        this.productId = productId;
+    }
+
+    public ProductDTO(String productName, int productQty, double productPrice) {
+        this.productName = productName;
+        this.productQty = productQty;
+        this.productPrice = productPrice;
+    }
+
+    public ProductDTO(int productId, String productName, int productQty, double productPrice) {
+        this.productId = productId;
         this.productName = productName;
         this.productQty = productQty;
         this.productPrice = productPrice;
