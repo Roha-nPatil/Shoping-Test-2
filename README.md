@@ -1,4 +1,4 @@
-#DATABASE
+## DATABASE
 ***
 
 create database shoppingdb;
