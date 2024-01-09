@@ -36,8 +36,7 @@ delimiter //
 create procedure placeOrder(in custName varchar(20), in productId int, in productQty int, out status boolean)
 begin
 	declare qty int;
-    select product_qty into qty from product_info where product_id = productId;
-    
+    select product_qty into qty from product_info where product_id = productId; 
     set status = false;
     if qty >= productQty then insert into order_info(customer_name, product_id, product_qty) values (custName, productId, productQty);
     update product_info set product_qty = product_qty - productQty where product_id = productId;
